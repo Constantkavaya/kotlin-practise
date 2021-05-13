@@ -1,29 +1,28 @@
-import java.time.temporal.TemporalAmount
+
 
 fun main() {
 
-    println(items(arrayOf("car","chair","table","door","shoes")))
+    println(items("car")
 }
  data class Car(var make:String,var model:String,var color:String) {
-
-
      fun listofCars() {
          var volvo = mutableListOf<String>()
          var nissan = mutableListOf<String>()
          var schoolbus = mutableListOf<String>()
          when ("groupofcars") {
-             "nissan" -> println(nissan.add("${name}"))
-             "schoolbus" -> println(schoolbus.add("${name}"))
-             else -> println(other.add("${name}"))
+             "nissan" -> println(nissan.add("${brand}"))
+             "schoolbus" -> println(schoolbus.add("${brand}"))
+             else -> println(other.add("${brand}"))
          }
          println (nissan)
          println(schoolbus)
+
      }
  }
-fun items(things:Array<String>):MutableList<String> {
-    var colect = mutableListOf<String>()
+fun items(things:String):String{
+    var colect =""
     for (thing in things) {
-        if(thing.length>5){
+        if(thing.length){
             colect.add(thing)
         }
     }
@@ -31,15 +30,14 @@ fun items(things:Array<String>):MutableList<String> {
 }
 class CurrentAccount(var  acountnumber:Int,var acountname: String, var balance:Int) {
 fun  deposit(amount:Double){
-    var Amount=0
-   var balance= Amount
-     println(balance++)
+    var increment=(balance+amount)
+   println(increment)
+
 
 }
     fun  withdraw(amount: Double){
-var balance=1
-        var Amount= balance
-        println(Amount--)
+        var decrement= balance-amount
+        println(decrement)
     }
 }
 fun  details(){
